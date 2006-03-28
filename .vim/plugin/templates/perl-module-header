@@ -1,0 +1,147 @@
+package Phred;
+
+=head1 NAME
+
+  [PACKAGE] - DESCRIPTION
+
+=cut
+
+=head1 SYNOPSIS
+
+[SYNOPSIS]
+
+=cut
+
+use strict;
+use warnings;
+use English;
+
+=head1 VARIABLES
+
+=cut
+
+my $package_lexical;
+our $globals;
+
+=head1 METHODS
+
+=over 4
+
+=item C<new>
+
+Instantiates a new object.
+
+  my $obj = $class->new($args_ref);
+
+=over 4
+
+=item pkg: C<$class> ( C<[PACKAGE]> CLASS ref )
+
+The package, or class reference.
+
+=item arg: C<$args_ref>
+
+A reference to the arguments you are passing to the constructor.
+
+=item obj: C<$obj> ( C<[PACKAGE> object )
+
+=back
+
+=cut
+
+sub new {
+    my ($class, $args_ref) = @_;
+
+	my $self = {};
+	bless $self, $class;
+
+	my $success = $self->_init($args_ref);
+	
+    return 1;
+}
+
+=item C<_init>
+
+Initialize the object with $args_ref
+
+  $success = $self->_init($args_ref);
+
+=over 4
+
+=item obj: C<$self> ( C<[PACKAGE]> object )
+
+The object to be initialized.
+
+=item arg: C<$args_ref>
+
+The arguments which initialize the object
+
+=item ret: C<$success> ( boolean )
+
+Returns true on success.
+
+=back
+
+=cut
+
+sub _init {
+    my ($self, $args_ref) = @_;
+
+    # initializing...
+
+    return 1;
+}
+
+=item C<save>
+
+Saves the object.
+
+  $success = $obj->save;
+
+=over 4
+
+=item obj: C<$obj> ( C<[PACKAGE]> object )
+
+The object to save.
+
+=item ret: C<$success> ( boolean )
+
+True if the object could be saved successfully.
+
+=back
+
+=cut
+
+sub save {
+	my $self = shift;
+	
+	return 0; # no save by default 
+}
+
+# some other methods
+
+=pos
+
+=back
+
+=cut
+
+1;
+
+__END__
+
+#===============================================================================
+#         FILE:  |FILENAME|
+#
+#  DESCRIPTION:  |CURSOR|
+#
+#        FILES:  ---
+#         BUGS:  ---
+#        NOTES:  ---
+#       AUTHOR:  |AUTHOR| (|AUTHORREF|), <|EMAIL|>
+#      COMPANY:  |COMPANY|
+#      VERSION:  1.0
+#      CREATED:  |DATE|
+#     REVISION:  ---
+#===============================================================================
+

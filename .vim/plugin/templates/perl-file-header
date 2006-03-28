@@ -1,0 +1,105 @@
+#!perl -w
+
+use strict;
+use warnings;
+use English;
+
+=head1 NAME
+
+ [NAME]
+
+=head1 SYNOPSIS
+
+ [SYNOPSIS]
+
+ myprog --opt1 --opt2
+
+ myprog --help
+
+ myprog --man
+ 
+=cut
+
+use Getopt::Long;
+use Pod::Usage;
+
+# Config options
+my $string = 0;
+my ($help, $man);
+
+pod2usage(1) unless @ARGV;
+GetOptions(
+	'string=s' => \$string,
+	'help'	   => \$help,
+	'man'	   => \$man,
+) or pod2usage(2);
+
+pod2usage(1) if $help;
+pod2usage( -verbose => 2) if $man;
+
+if (0) { # invalid args combo
+	exit(0);
+}
+
+# you may proceed
+
+1;
+
+__END__
+
+=head1 DESCRIPTION
+
+[DESCRIPTION]
+
+=head1 OPTIONS
+
+=over 4
+
+=item B<opt1>
+
+The first option
+
+=item B<opt2>
+
+The second option
+
+=back
+
+=head1 TODO
+
+=over 4
+
+=item *
+
+Todo #1
+
+=back
+
+=head1 BUGS
+
+None yet
+
+=head1 AUTHOR
+
+[AUTHOR]
+
+=cut
+
+#===============================================================================
+#
+#         FILE:  |FILENAME|
+#
+#        USAGE:  ./|FILENAME| 
+#
+#  DESCRIPTION:  |CURSOR|
+#
+#      OPTIONS:  ---
+# REQUIREMENTS:  ---
+#         BUGS:  ---
+#        NOTES:  ---
+#       AUTHOR:  |AUTHOR| (|AUTHORREF|), <|EMAIL|>
+#      COMPANY:  |COMPANY|
+#      VERSION:  1.0
+#      CREATED:  |DATE|
+#     REVISION:  ---
+#===============================================================================
