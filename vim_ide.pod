@@ -18,7 +18,7 @@ http://www.vim.org
 
 =item B<history>
 
-Vim is an improved version of the vi editor.  It's primary author is Bram
+Vim is an improved version of the vi editor.  Its primary author is Bram
 Moolenaar.
 
 =item B<scripts>
