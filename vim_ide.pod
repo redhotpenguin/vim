@@ -1,0 +1,267 @@
+=head1 NAME
+
+Using Vim 6 to develop Perl software
+
+=head1 ABSTRACT
+
+This presentation features Vim 6 and several Vim plugins which create a 
+productive Perl Integrated Development Environment (PIDE).  Usage of key 
+features of each plugin is demonstrated.
+
+=head1 DESCRIPTION
+
+=head2 Vim
+
+=over 4
+
+=item B<url>
+
+http://www.vim.org
+
+=item B<history>
+
+Vim is an improved version of the vi editor.  It's primary author is Bram
+Moolenaar.
+
+=item B<scripts>
+
+http://www.vim.org/scripts/index.php
+
+Lots of useful plugins which you can use to customize vim to your needs.
+
+=item B<basics>
+
+ :help
+
+ :help buffer
+
+ :bwipeout - close current buffer
+
+ :buffers - show list of buffers
+
+ :b4 - bring buffer 4 to the front
+
+ :split - split the window
+
+ :next filename.pm - open or create a file in a new buffer
+
+ v - visual mode, highlight sections of code easily
+
+ i - insert mode
+
+ esc - command mode
+ If you get lost just click ESC three times and say
+ "There's no place like command mode..."
+
+ :wq - write and quit
+
+ :q - just quit
+
+ :69 - jump to line number 69
+ 
+=back
+
+=head2 Perl IDE
+
+=over 4
+
+=item B<perl-support>
+
+http://www.vim.org/scripts/script.php?script_id=556
+
+Author is Fritz Mehner.  He answered several questions I had.
+
+=over 4
+
+=item B<templates>
+
+Start with .pl, .t, and .pm templates.  Save yourself a bunch of bookkeeping
+work yet have complete, well documented and structured starting points.
+
+ :next foo.pod   <== TODO
+ :next foo.t
+ :next foo.pm
+ :next foo.pl
+
+Please note that these commands should be invoked in that order first to last
+for test driven development best practices.
+
+Write some docs describing the business and technical goals. (Do both please :))
+
+Write some tests.
+
+Run the tests.
+
+Watch the tests fail.
+
+Write a Perl module.  
+
+Run the tests.  
+
+Watch the tests pass (yay!).  
+
+Write a program which implements the library methods.
+
+Watch your program run without bugs.
+
+=item B<syntax check>
+
+Convenient macro for syntax checking the buffer contents.
+
+ \rs
+
+=item B<perltidy>
+
+Don't worry about indenting, just write the code.  Then clean it up with this.
+Run it often, it helps you to see what's going on.
+
+ \ry
+
+=item B<perlrun>
+
+Run your program.  Something didn't go quite as planned?  Try the debugger.
+
+ \rr
+
+
+=item B<perldebug>
+
+Step right into the perl debugger.  Works best in GUI mode (gvim).  Suggested
+usage is to open the file from a shell in GUI mode, there is an intermittent bug
+which prevents the debugger xterm window opening sometimes if you load a new
+buffer then invoke the debugger.
+
+ \rd
+
+ 
+=item B<perlcritic>
+
+What would the Damian think of what you have written?
+
+ \rc
+
+=item B<profiling>
+
+Ah you wrote something and it works but it needs to be faster eh?  No problem!
+Devel::SmallProf to the rescue.
+ 
+ \rm
+
+=item B<pod>
+
+Need to see how your POD looks or consult the man page for a module?
+
+ \h - use module name, or position cursor over keyword
+
+=item B<other hotkeys>
+
+There are various other key combos which you can use to insert code snippets,
+etc.  A pdf is included of all mappings.
+
+=item B<installation>
+
+Download the latest version
+
+Move it to .vim
+
+Unzip it
+
+:help ~/.vim/doc/perl-support.txt  - loads the help file
+
+Write some Perl.
+
+=back
+
+=item B<autocomplete>
+
+http://vim.sourceforge.net/tips/tip.php?tip_id=102
+
+Bye bye RSI.  Less typing means less chance of injury.  Declare a variable, then
+you won't have to type it out fully again.  Builds a corpus of terms on the fly
+from all open buffers.  This will save you millions of keystrokes over a 
+lifetime.
+
+=item B<ctags>
+
+http://vim.sourceforge.net/scripts/script.php?script_id=12
+http://ctags.sourceforge.net/
+
+"One buffer to rule them all"
+
+ :TlistToggle
+
+Watch in awe as classes with dozens of methods suddenly 
+become manageable.
+
+ctrl+w left-arrow  jumps the cursor to the tag index.  
+Hit enter when you are over the tag of interest to jump it to 
+focus in the current buffer.
+
+Fold sections to keep the big picture in view.
+
+Press ? to view help.
+
+Press u to update tag list.
+
+Press q to quit the taglist window.
+
+Type :bwipeout when you're done with a buffer and ctags conveniently provides
+the index as the next user step.
+
+=item B<version control>
+
+CVS - http://vim.sourceforge.net/scripts/script.php?script_id=90
+
+:CVSAdd
+
+:CVSCommit
+
+:CVSDiff
+
+SVN - http://vim.sourceforge.net/scripts/script.php?script_id=922
+
+:SVNAdd
+
+:SVNCommit
+
+:SVNDiff
+
+=back
+
+=head1 TODO
+
+=over 4
+
+=item B<CPAN>
+
+Install CPAN modules with a hotkey.  You use CPAN right? :)
+
+ \rz Devel::SmallProf
+
+ \rl i/ModuleName/ - searches for ModuleName
+
+=back
+
+=head1 SOURCE
+
+Latest changes to this document may be found at:
+
+https://www.redhotpenguin.com/svn/vim
+
+=head1 BUGS
+
+Hopefully none, report any to the maintainer
+
+=head1 LICENSE
+
+This document is licensed under the same terms as Perl itself.
+
+=head1 AUTHOR
+
+  Fred Moyer <fred@redhotpenguin.com>
+
+=head1 COPYRIGHT
+
+  Copyright 2006 Red Hot Penguin Consulting LLC
+
+=cut
