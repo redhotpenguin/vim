@@ -10,6 +10,8 @@ features of each plugin is demonstrated.
 
 =head1 DESCRIPTION
 
+=head2 Vim the editor
+
 =over 4
 
 =item B<url>
