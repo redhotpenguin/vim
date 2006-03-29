@@ -8,6 +8,9 @@ This presentation features Vim 6 and several Vim plugins which create a
 productive Perl Integrated Development Environment (IDE).  Usage of key 
 features of each plugin is demonstrated.
 
+This document is the notes from a talk I gave at the SF Perl Users Group
+meeting on March 28th, 2006.
+
 =head1 DESCRIPTION
 
 =head2 Vim the editor
