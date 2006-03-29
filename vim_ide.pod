@@ -5,7 +5,7 @@ Using Vim 6 to develop Perl software
 =head1 ABSTRACT
 
 This presentation features Vim 6 and several Vim plugins which create a 
-productive Perl Integrated Development Environment (PIDE).  Usage of key 
+productive Perl Integrated Development Environment (IDE).  Usage of key 
 features of each plugin is demonstrated.
 
 =head1 DESCRIPTION
@@ -20,8 +20,10 @@ http://www.vim.org
 
 =item B<history>
 
-Vim is an improved version of the vi editor.  Its primary author is Bram
-Moolenaar.
+Vim is an improved version of the vi editor (Vi IMproved).  
+It's primary author is Bram Moolenaar, there are several contributing authors.
+
+:help credits - full authorship detail.
 
 =item B<scripts>
 
@@ -31,9 +33,9 @@ Lots of useful plugins which you can use to customize vim to your needs.
 
 =item B<basics>
 
- :help
+ :help - general help
 
- :help buffer
+ :help buffer - help on a specific command
 
  :bwipeout - close current buffer
 
@@ -45,9 +47,9 @@ Lots of useful plugins which you can use to customize vim to your needs.
 
  :next filename.pm - open or create a file in a new buffer
 
- v - visual mode, highlight sections of code easily
+ v - visual mode - highlight sections of code easily
 
- i - insert mode
+ i - insert mode - used for editing
 
  esc - command mode
  If you get lost just click ESC three times and say
@@ -59,6 +61,15 @@ Lots of useful plugins which you can use to customize vim to your needs.
 
  :69 - jump to line number 69
  
+ recovery - when starting vim if a swap file exists you can 
+ recover or delete the swap file.  To learn this in a safe 
+ environment, open up a vim window, type something, save, type 
+ some more, then kill -9 the vim process.  Upon re-opening the 
+ file you can recover the content that you entered after the save.
+
+ .vimrc - many examples on the web, we won't discuss this 
+	too deeply.
+ 
 =back
 
 =head2 Perl IDE
@@ -69,9 +80,29 @@ Lots of useful plugins which you can use to customize vim to your needs.
 
 http://www.vim.org/scripts/script.php?script_id=556
 
-Author is Fritz Mehner.  He answered several questions I had.
+Lots of useful plugins which you can use to customize vim to your needs.
+Most are easy to install, I'll demonstrate four of them today.
+
+Author is Dr.-Ing.Fritz Mehner.  He answered several questions I had regarding
+perl-support.
 
 =over 4
+
+=item B<installation>
+
+Download the latest version (2.9.1 at the time of this writing)
+
+Move it to .vim
+
+Unzip it
+
+Read README.perlsupport
+
+:help ~/.vim/doc/perl-support.txt  - loads the help file
+
+:help perl-support
+
+Write some Perl.
 
 =item B<templates>
 
@@ -84,25 +115,7 @@ work yet have complete, well documented and structured starting points.
  :next foo.pl
 
 Please note that these commands should be invoked in that order first to last
-for test driven development best practices.
-
-Write some docs describing the business and technical goals. (Do both please :))
-
-Write some tests.
-
-Run the tests.
-
-Watch the tests fail.
-
-Write a Perl module.  
-
-Run the tests.  
-
-Watch the tests pass (yay!).  
-
-Write a program which implements the library methods.
-
-Watch your program run without bugs.
+for test driven development practices. [1]
 
 =item B<syntax check>
 
@@ -123,7 +136,6 @@ Run your program.  Something didn't go quite as planned?  Try the debugger.
 
  \rr
 
-
 =item B<perldebug>
 
 Step right into the perl debugger.  Works best in GUI mode (gvim).  Suggested
@@ -131,19 +143,23 @@ usage is to open the file from a shell in GUI mode, there is an intermittent bug
 which prevents the debugger xterm window opening sometimes if you load a new
 buffer then invoke the debugger.
 
- \rd
+Or you can use one window per project, the debugger xterm should open cleanly
+in that case.
 
+ \rd
  
 =item B<perlcritic>
 
-What would the Damian think of what you have written?
+What would the Damian think of what you have written?  If you run this command
+and the result is 'no critique', then you are using best coding practices.
 
  \rc
 
 =item B<profiling>
 
-Ah you wrote something and it works but it needs to be faster eh?  No problem!
-Devel::SmallProf to the rescue.
+Ah you wrote something and it works but it needs to be faster?  No problem!
+Devel::SmallProf to the rescue.  Scroll to the bottom of the profiler
+buffer for the relevant info
  
  \rm
 
@@ -226,19 +242,21 @@ SVN - http://vim.sourceforge.net/scripts/script.php?script_id=922
 
 :SVNDiff
 
+=item B<CPAN>
+
+Use the bang operator to install modules from vim
+
+:!cpan -i PPI
+
 =back
 
 =head1 TODO
 
 =over 4
 
-=item B<CPAN>
+=item C<pod>
 
-Install CPAN modules with a hotkey.  You use CPAN right? :)
-
- \rz Devel::SmallProf
-
- \rl i/ModuleName/ - searches for ModuleName
+Template for .pod files.
 
 =back
 
@@ -263,5 +281,35 @@ This document is licensed under the same terms as Perl itself.
 =head1 COPYRIGHT
 
   Copyright 2006 Red Hot Penguin Consulting LLC
+
+=head1 REFERENCES
+
+=over 4
+
+=item B<1> - suggested test driven development methodology
+
+  Write some docs describing the business and technical goals.
+
+  Write some tests.
+
+  Run the tests.
+
+  Watch the tests fail.
+
+  Write a Perl module.  
+
+  Run the tests.  
+
+  Watch the tests pass.
+
+  Write a program which implements the library methods.
+
+  Watch your program run without bugs.
+
+  Achieve 100% test coverage using Devel::Cover
+
+  Optimize if performance requirements have not been met.
+
+=back
 
 =cut
