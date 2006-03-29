@@ -28,6 +28,12 @@ It's primary author is Bram Moolenaar, there are several contributing authors.
 
 :help credits - full authorship detail.
 
+=item B<future>
+
+Vim 7 is just around the corner.  See the development page for details.
+
+http://www.vim.org/develop.php
+
 =item B<scripts>
 
 http://www.vim.org/scripts/index.php
