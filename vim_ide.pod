@@ -202,8 +202,12 @@ lifetime.
 
 =item B<ctags>
 
-http://vim.sourceforge.net/scripts/script.php?script_id=12
+http://www.vim.org/scripts/script.php?script_id=273
 http://ctags.sourceforge.net/
+
+NOTE - thanks to http://use.perl.org/~rhesa for pointed out that I was actually
+using taglist.vim here, not ctags.  My bad.  See the additional resources
+section for the link to ctags.vim.
 
 "One buffer to rule them all"
 
@@ -278,7 +282,15 @@ https://www.redhotpenguin.com/svn/vim
   http://pdx.pm.org/kwiki/index.cgi?VimRCFile
 
   Thanks to Eric Wilhelm for this link to the PDX .vimrc collection.
-  
+
+=item B<ctags> 
+
+The real ctags plugin, this presentation mistakenly covered taglist.vim instead.
+
+Thanks to Rhesa@use.perl.org for the spot
+ 
+http://vim.sourceforge.net/scripts/script.php?script_id=12
+
 =back
 
 =head1 BUGS
