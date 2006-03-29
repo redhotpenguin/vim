@@ -14,7 +14,7 @@ package Phred;
 
 use strict;
 use warnings;
-use English;
+use English qw(no_match);
 
 =head1 VARIABLES
 
