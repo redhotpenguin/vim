@@ -257,7 +257,7 @@ Use the bang operator to install modules from vim
 
 =over 4
 
-=item C<pod>
+=item B<pod>
 
 Template for .pod files.
 
@@ -268,6 +268,18 @@ Template for .pod files.
 Latest changes to this document may be found at:
 
 https://www.redhotpenguin.com/svn/vim
+
+=head1 ADDITIONAL RESOURCES
+
+=over 4
+
+=item B<dotvimrc>
+
+  http://pdx.pm.org/kwiki/index.cgi?VimRCFile
+
+  Thanks to Eric Wilhelm for this link to the PDX .vimrc collection.
+  
+=back
 
 =head1 BUGS
 
