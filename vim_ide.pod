@@ -68,7 +68,7 @@ Lots of useful plugins which you can use to customize vim to your needs.
  file you can recover the content that you entered after the save.
 
  .vimrc - many examples on the web, we won't discuss this 
-	too deeply.
+ too deeply if at all.  See my .vimrc alongside this source file.
  
 =back
 
