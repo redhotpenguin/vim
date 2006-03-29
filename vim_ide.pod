@@ -200,10 +200,9 @@ you won't have to type it out fully again.  Builds a corpus of terms on the fly
 from all open buffers.  This will save you millions of keystrokes over a 
 lifetime.
 
-=item B<ctags>
+=item B<taglist>
 
 http://www.vim.org/scripts/script.php?script_id=273
-http://ctags.sourceforge.net/
 
 NOTE - thanks to http://use.perl.org/~rhesa for pointed out that I was actually
 using taglist.vim here, not ctags.  My bad.  See the additional resources
@@ -290,6 +289,7 @@ The real ctags plugin, this presentation mistakenly covered taglist.vim instead.
 Thanks to Rhesa@use.perl.org for the spot
  
 http://vim.sourceforge.net/scripts/script.php?script_id=12
+http://ctags.sourceforge.net/
 
 =back
 
