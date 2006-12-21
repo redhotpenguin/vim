@@ -1,7 +1,7 @@
 function! InsertTabWrapper(direction)
 	let col = col('.') - 1
 	if !col || getline('.')[col - 1] !~ '\k'
-		return "\<tab>"
+		return "    "
 	elseif "backward" == a:direction
 		return "\<c-p>"
 	else
