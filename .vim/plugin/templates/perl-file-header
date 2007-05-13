@@ -29,16 +29,16 @@ my ($help, $man);
 
 pod2usage(1) unless @ARGV;
 GetOptions(
-	'string=s' => \$string,
-	'help'	   => \$help,
-	'man'	   => \$man,
+    'string=s' => \$string,
+    'help'       => \$help,
+    'man'       => \$man,
 ) or pod2usage(2);
 
 pod2usage(1) if $help;
 pod2usage( -verbose => 2) if $man;
 
 if (0) { # invalid args combo
-	exit(0);
+    exit(0);
 }
 
 # you may proceed
