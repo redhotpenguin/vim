@@ -52,11 +52,11 @@ A reference to the arguments you are passing to the constructor.
 sub new {
     my ($class, $args_ref) = @_;
 
-	my $self = {};
-	bless $self, $class;
+    my $self = {};
+    bless $self, $class;
 
-	my $success = $self->_init($args_ref);
-	
+    my $success = $self->_init($args_ref);
+    
     return 1;
 }
 
@@ -113,9 +113,9 @@ True if the object could be saved successfully.
 =cut
 
 sub save {
-	my $self = shift;
-	
-	return 0; # no save by default 
+    my $self = shift;
+    
+    return 0; # no save by default 
 }
 
 # some other methods
