@@ -3,9 +3,10 @@ function! InsertTabWrapper(direction)
     if !col || getline('.')[col - 1] !~ '\k'
         return "    "
     elseif "backward" == a:direction
-        return "\<c-p>"
+        return "    "
     else
-        return "\<c-n>"
+
+        return "    "
     endif
 endfunction
 
